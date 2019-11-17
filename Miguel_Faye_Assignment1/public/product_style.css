@@ -35,13 +35,13 @@ h3 {
   }
   
   li a.active {
-    background-color: white;
-    color: darkolivegreen;
+    background-color: darkseagreen;
+    color: white;
   }
   
   li a:hover:not(.active) {
-    background-color: gray;
-    color: white;
+    background-color: linen;
+    color: black;
   }
 
           
@@ -86,3 +86,18 @@ h3 {
       font-family: "Brushstroke", fantasy;
     }
 
+tr:hover {
+background-color: linen;}
+
+td {
+padding-top: 6px;
+padding-bottom: 6px;
+}
+
+th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: left;
+  background-color: darkolivegreen;
+  color: white;
+}
