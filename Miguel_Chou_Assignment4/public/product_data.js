@@ -1,31 +1,31 @@
-//This file containes the JSON object for the products
+//This file containes the JSON object for the products available in the merchandise shop.
 
 var products = 
 [
     {
-        "bracelet": "Silver Turtle",
-        "price": 25.00,
-        "image": "bracelet1.png"
-    },
-    {
-        "bracelet": "Silver Mermaid",
-        "price": 25.00,
-        "image": "bracelet2.png"
-    },
-    {
-        "bracelet": "Crystal Paw",
+        "item": "White Jersey",
         "price": 35.00,
-        "image": "bracelet3.png"
+        "image": "AMA_jersey1.jpg"
     },
     {
-        "bracelet": "Pair of Wings",
-        "price": 45.00,
-        "image": "bracelet4.png"
+        "item": "Black Jersey",
+        "price": 35.00,
+        "image": "AMA_jersey2.png"
     },
     {
-        "bracelet": "Layered Rose Gold Turtle",
-        "price": 65.00,
-        "image": "bracelet5.jpg"
+        "item": "Stickers",
+        "price": 5.00,
+        "image": "AMA_sticker.png"
+    },
+    {
+        "item": "Graduation Stoles",
+        "price": 35.00,
+        "image": "AMA_stole.png"
+    },
+    {
+        "item": "Sweatshirt",
+        "price": 25.00,
+        "image": "AMA_sweatshirt.png"
     },
 ]
 if(typeof module != 'undefined') {
