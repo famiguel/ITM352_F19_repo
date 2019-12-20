@@ -1,30 +1,95 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AMA</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<title>AMA-UHM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('images/ama.png');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
 <body>
 
-<ul>
-  <li><a class="active" href="./index.html">Home</a></li>
-  <li><a href="./officers_page.html">Executive Board</a></li>
-  <li><a href="./registration_page.html">Log-in</a></li>
-  <li><a href="./product_page.html">Shop</a></li>
-</ul>
-
-<div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
-  <h1>Fixed Top Navigation Bar</h1>
-  <h2>Scroll this page to see the effect</h2>
-  <h2>The navigation bar will stay at the top of the page while scrolling</h2>
-
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="coverpage w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('login').style.display='block'" class="w3-button w3-black">login</button></p>
+    <p><button onclick="document.getElementById('register').style.display='block'" class="w3-button w3-black">register</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">Adventure Awaits with AMA</p>
+    <p class="w3-large">Shidler College of Business</p>
+  </div>
 </div>
+
+<!-- Login Modal -->
+<div id="login" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+  <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('login').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Login</h1>
+    </div>
+    <form name="loginform" method="POST">
+      <div>
+          <input type="text" name="username" size="40" placeholder="enter username"><br/>
+  <br>
+          <input type="password" name="password" size="40" placeholder="enter password"><br/>
+  <br>
+          <input type="submit" value="login" id="submit"></div></form>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div id="register" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('register').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Register</h1>
+    </div>
+    <script>src ="server.js"</script>
+</head>
+<script>
+        var password = document.getElementById("password") //turns password into an object
+        ,repeat_password = document.getElementById("repeat_password"); //turns repeat password into an object
+        
+        function validatePassword(){
+          if(password.value != repeat_password.value) { //if password is not equal to repeat password, say passwords don't match
+            alert("Please make sure passwords match.");
+        response.redirect('public/registration.html') 
+          } 
+        else{
+            response.redirect('Login_Successful') 
+        }
+      
+        }
+          validatePassword();
+      </script>
+<body>
+   
+
+    <!--this code puts the whole body of the website not overlapping the navbar-->
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+        <div>
+                <form  method="POST" action="" onsubmit=validatePassword() >
+                  <input type="text" name="fullname" size="40" pattern="[a-zA-Z]+[ ]+[a-zA-Z]+" maxlength="30" placeholder="Enter First & Last Name"><br />
+                  <input type="text" name="username" size="40" pattern=".[a-z0-9]{3,10}" required title="Minimum 4 Characters, Maximum 10 Characters, Numbers/Letters Only" placeholder="Enter Username" ><br />
+                  <input type="email" name="email" size="40" placeholder="Enter Email" pattern="[a-z0-9._]+@[a-z0-9]+\.[a-z]{3,}$" required title="Please enter valid email."><br />
+                  <input type="password" id="password" name="password"  size="40" pattern=".{8,}" required title="8 Characters Minimum" placeholder="Enter Password"><br />
+                  <input type="password" id="repeat_password" name="repeat_password" size="40" pattern=".{8,}" required title="8 Characters Minimum" placeholder="Repeat Password"><br />
+               
+                  <input type="submit" value="Submit" id="submit">
+              </form></div>
+           
+  </div>
+</div>
+
 </body>
 </html>
+
